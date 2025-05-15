@@ -51,13 +51,13 @@ namespace ConsoleAdoDotNet
 
 
                 MySqlCommand command = new MySqlCommand(query, connection);
-                await command.Parameters.AddWithValue("@Id", Guid.NewGuid());
-                await command.Parameters.AddWithValue("@FirstName", firstName);
-                await command.Parameters.AddWithValue("@LastName", lastName);
-                await command.Parameters.AddWithValue("@Email", email);
-                await command.Parameters.AddWithValue("@Department", department);
-                await command.Parameters.AddWithValue("@HiredDate", hireDate);
-                await command.Parameters.AddWithValue("@Salary", salary);
+                command.Parameters.AddWithValue("@Id", Guid.NewGuid());
+                command.Parameters.AddWithValue("@FirstName", firstName);
+                command.Parameters.AddWithValue("@LastName", lastName);
+                command.Parameters.AddWithValue("@Email", email);
+                command.Parameters.AddWithValue("@Department", department);
+                command.Parameters.AddWithValue("@HiredDate", hireDate);
+                command.Parameters.AddWithValue("@Salary", salary);
 
                 try
                 {
