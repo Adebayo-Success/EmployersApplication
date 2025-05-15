@@ -35,10 +35,10 @@ while (true)
             employeeService.ViewEmployeeById();
             break;
         case 4:
-            employeeService.UpdateEmployee();
+            await employeeService.UpdateEmployee();
             break;
         case 5:
-            employeeService.DeleteEmployee();
+            await employeeService.DeleteEmployee();
             break;
         case 6:
             Environment.Exit(0);

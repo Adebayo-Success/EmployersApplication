@@ -153,7 +153,7 @@ namespace ConsoleAdoDotNet
             }
         }
 
-        public void UpdateEmployee()
+        public async Task UpdateEmployee()
         {
             Console.Write("\nEnter Employee ID to update: ");
 
@@ -172,7 +172,7 @@ namespace ConsoleAdoDotNet
 
                 try
                 {
-                    connection.Open();
+                    await connection.OpenAsync();
                     int employeeCount = (int)checkCommand.ExecuteScalar();
                     if (employeeCount == 0)
                     {
@@ -254,7 +254,7 @@ namespace ConsoleAdoDotNet
             }
         }
 
-        public void DeleteEmployee()
+        public async Task DeleteEmployee()
         {
             Console.Write("\nEnter Employee ID to delete: ");
 
@@ -272,7 +272,7 @@ namespace ConsoleAdoDotNet
 
                 try
                 {
-                    connection.Open();
+                    await connection.OpenAsync();
                     int rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
